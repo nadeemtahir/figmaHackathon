@@ -79,12 +79,22 @@ const Footer2 = () => {
 
       {/* Column 3: Menu */}
       <div className="sm:flex-1">
-        <h1 className="text-lg font-bold mb-2">Menu</h1>
-        <p>New arrivals</p>
-        <p>Best sellers</p>
-        <p>Recently viewed</p>
-        <a href="/product">Popular this week</a>
-        <a href="/productlist">All products</a>
+        <h1 className="text-lg font-bold mb-4 text-white">Menu</h1>
+        <ul className="space-y-2 text-sm text-white">
+          <li>New arrivals</li>
+          <li>Best sellers</li>
+          <li>Recently viewed</li>
+          <li>
+            <a href="/product" className="hover:underline">
+              Popular this week
+            </a>
+          </li>
+          <li>
+            <a href="/productlist" className="hover:underline">
+              All products
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Column 4: Categories */}
