@@ -27,7 +27,9 @@ const Header = () => {
           <Link href="/cart">
             <MdOutlineShoppingCart />
           </Link>
+          <Link href="/">
           <CgProfile />
+          </Link>
         </div>
       </div>
 
