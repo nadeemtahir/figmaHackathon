@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FiSearch, FiHeart, FiMenu, FiX } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaRegUserCircle } from "react-icons/fa";
+import Link from "next/link";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +62,9 @@ const Header = () => {
             <FiHeart className="h-[16px] w-[16px] bg-[#ffffff]" />
           </div>
           <div className="cursor-pointer">
+            <Link href="/">
             <FaRegUserCircle  className="h-[16px] w-[16px] bg-[#ffffff]" />
+            </Link>
           </div>
 
           {/* Search Icon for mobile */}
