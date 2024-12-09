@@ -12,67 +12,88 @@ import {
 
 const Footer = () => {
   return (
-    <div className="h-auto bg-[#2A254B] py-10">
-      <div className="flex flex-wrap justify-between px-5 sm:px-20 space-y-8 sm:space-y-0">
+    <div className="bg-[#2A254B] py-10">
+      {/* Grid layout for sections */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 sm:px-20">
         {/* Menu Section */}
-        <div className="flex-1 sm:flex-none">
-          <h1 className="text-white text-lg font-Clash Display">Menu</h1>
-          <p className="text-white mt-4 text-sm">New arrivals</p>
-          <p className="text-white mt-4 text-sm">Best seller</p>
-          <p className="text-white mt-4 text-sm">Recently Viewed</p>
-          <Link href="/product" className="text-white mt-4 text-sm">Popular this week</Link>
-          <Link href="/productlist" className="text-white mt-4 text-sm block">All Products</Link>
+        <div>
+          <h1 className="text-white text-lg font-semibold">Menu</h1>
+          <ul className="mt-4 space-y-2 text-sm text-white">
+            <li>New arrivals</li>
+            <li>Best seller</li>
+            <li>Recently Viewed</li>
+            <li>
+              <Link href="/product" className="hover:underline">
+                Popular this week
+              </Link>
+            </li>
+            <li>
+              <Link href="/productlist" className="hover:underline">
+                All Products
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Category Section */}
-        <div className="flex-1 sm:flex-none">
-          <h1 className="text-white text-lg font-Clash Display">Category</h1>
-          <p className="text-white mt-4 text-sm">Crockery</p>
-          <p className="text-white mt-4 text-sm">Furniture</p>
-          <p className="text-white mt-4 text-sm">Homeware</p>
-          <p className="text-white mt-4 text-sm">Plants pot</p>
-          <p className="text-white mt-4 text-sm">Chair</p>
+        <div>
+          <h1 className="text-white text-lg font-semibold">Category</h1>
+          <ul className="mt-4 space-y-2 text-sm text-white">
+            <li>Crockery</li>
+            <li>Furniture</li>
+            <li>Homeware</li>
+            <li>Plants pot</li>
+            <li>Chair</li>
+          </ul>
         </div>
 
         {/* Company Section */}
-        <div className="flex-1 sm:flex-none">
-          <h1 className="text-white text-lg font-Clash Display">Our Company</h1>
-          <Link href="/about" className="text-white mt-4 text-sm">About Us</Link>
-          <p className="text-white mt-4 text-sm">Vacancies</p>
-          <p className="text-white mt-4 text-sm">Contact Us</p>
-          <p className="text-white mt-4 text-sm">Privacy</p>
-          <p className="text-white mt-4 text-sm">Return Policy</p>
+        <div>
+          <h1 className="text-white text-lg font-semibold">Our Company</h1>
+          <ul className="mt-4 space-y-2 text-sm text-white">
+            <li>
+              <Link href="/about" className="hover:underline">
+                About Us
+              </Link>
+            </li>
+            <li>Vacancies</li>
+            <li>Contact Us</li>
+            <li>Privacy</li>
+            <li>Return Policy</li>
+          </ul>
         </div>
 
         {/* Mailing List Section */}
-        <div className="flex-1 sm:flex-none">
-          <h1 className="text-white text-lg font-Clash Display">Join our mailing list</h1>
+        <div>
+          <h1 className="text-white text-lg font-semibold">Join our mailing list</h1>
           <div className="mt-5">
             <input
               type="email"
               placeholder="you@gmail.com"
-              className="bg-gray-500 w-full sm:w-80 h-12 p-5 rounded-sm"
+              className="bg-gray-500 w-full h-12 p-4 rounded-md text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button className="bg-white h-12 w-full sm:w-32 rounded-sm mt-2 sm:mt-3">Sign Up</button>
+            <button className="bg-white w-full sm:w-auto mt-3 h-12 px-6 text-sm font-semibold rounded-md hover:bg-gray-200 transition">
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="border-t-2 border-gray-700 m-auto w-full sm:w-11/12 mt-8 pt-4 flex flex-wrap justify-between items-center">
+      <div className="border-t-2 border-gray-700 mt-8 pt-6 px-5 sm:px-20 flex flex-wrap justify-between items-center">
         {/* Copyright Text */}
         <p className="text-white text-sm text-center sm:text-left w-full sm:w-auto">
-          Copyright 2022 Avion LTD
+          © 2022 Avion LTD. All Rights Reserved.
         </p>
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 justify-center sm:justify-end w-full sm:w-auto mt-4 sm:mt-0">
-          <FaLinkedin className="text-white text-xl hover:text-blue-500" />
-          <FaFacebookSquare className="text-white text-xl hover:text-blue-400" />
-          <FaInstagram className="text-white text-xl hover:text-pink-500" />
-          <FaSkype className="text-white text-xl hover:text-blue-300" />
-          <FaTwitter className="text-white text-xl hover:text-blue-400" />
-          <FaPinterest className="text-white text-xl hover:text-red-500" />
+          <FaLinkedin className="text-white text-2xl hover:text-blue-500 transition" />
+          <FaFacebookSquare className="text-white text-2xl hover:text-blue-400 transition" />
+          <FaInstagram className="text-white text-2xl hover:text-pink-500 transition" />
+          <FaSkype className="text-white text-2xl hover:text-blue-300 transition" />
+          <FaTwitter className="text-white text-2xl hover:text-blue-400 transition" />
+          <FaPinterest className="text-white text-2xl hover:text-red-500 transition" />
         </div>
       </div>
     </div>
