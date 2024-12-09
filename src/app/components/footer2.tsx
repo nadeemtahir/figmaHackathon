@@ -101,7 +101,7 @@ const Footer2 = () => {
       {/* Column 5: Our company */}
       <div className="sm:flex-1">
         <h1 className="text-lg font-bold mb-2">Our company</h1>
-        <p>About us</p>
+        <a href="/about">About us</a>
         <p>Vacancies</p>
         <p>Contact us</p>
         <p>Privacy</p>
