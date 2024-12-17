@@ -41,13 +41,13 @@ const Header = () => {
         {/* Desktop Menu */}
 
         <ul className="hidden md:flex items-center space-x-6 text-[#000000] font-medium">
-          <li className="cursor-pointer text-[#726E8D]">Plant pots</li>
-          <li className="cursor-pointer text-[#726E8D]">Ceramics</li>
-          <li className="cursor-pointer text-[#726E8D]">Tables</li>
-          <li className="cursor-pointer text-[#726E8D]">Chairs</li>
-          <li className="cursor-pointer text-[#726E8D]">Crockery</li>
-          <li className="cursor-pointer text-[#726E8D]">Tableware</li>
-          <li className="cursor-pointer text-[#726E8D]">Cutlery</li>
+          <Link className="cursor-pointer text-[#726E8D]" href="/">Home</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/">Ceramics</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/product">Popular</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/about">About</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/">Crockery</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/">Tableware</Link>
+          <Link className="cursor-pointer text-[#726E8D]" href="/">Cutlery</Link>
         </ul>
 
         {/* Icons and Search Bar */}
@@ -99,18 +99,28 @@ const Header = () => {
           />
         </div>
         <ul className="flex flex-col items-center space-y-4 p-6">
-          <li className="cursor-pointer text-black hover:text-gray-700">
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/">
             Home
-          </li>
-          <li className="cursor-pointer text-black hover:text-gray-700">
-            Contact
-          </li>
-          <li className="cursor-pointer text-black hover:text-gray-700">
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/">
+            Ceramics
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/product">
+           Popular
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/about">
             About
-          </li>
-          <li className="cursor-pointer text-black hover:text-gray-700">
-            Signup
-          </li>
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/">
+            Crockery
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/">
+            Table ware
+          </Link>
+          <Link className="cursor-pointer text-black hover:text-gray-700" href="/">
+             Cutlery
+          </Link>
+          
         </ul>
       </div>
 
