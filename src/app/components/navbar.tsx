@@ -44,16 +44,16 @@ const Header = () => {
       {menuOpen && (
         <div className="lg:hidden flex flex-col items-center gap-4 mt-4">
           <Link href="/" className="text-[#726E8D] text-lg">
-            Plant pots
+          Home
           </Link>
           <Link href="/" className="text-[#726E8D] text-lg">
             Ceramics
           </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Tables
+          <Link href="/product" className="text-[#726E8D] text-lg">
+           Popular
           </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Chairs
+          <Link href="/about" className="text-[#726E8D] text-lg">
+            About
           </Link>
           <Link href="/" className="text-[#726E8D] text-lg">
             Crockery
@@ -71,16 +71,16 @@ const Header = () => {
       <div className="lg:flex hidden sm:hidden w-full justify-center items-center h-1/2 text-[#726E8D]">
         <nav className="flex gap-6 justify-center w-full">
           <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
-            Plant pots
+            Home
           </Link>
           <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Ceramics
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
-            Tables
+          <Link href="/product" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+            Popular
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
-            Chairs
+          <Link href="/about" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+            About
           </Link>
           <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Crockery
