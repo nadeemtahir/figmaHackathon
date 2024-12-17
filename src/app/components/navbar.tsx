@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header className="max-w-[1440px] h-[132px] flex flex-col items-center bg-white px-10 lg:w-full mx-auto">
+    <header className="max-w-[1440px] h-[132px] flex flex-col items-center bg-white px-10 lg:w-full mx-auto relative">
       {/* Top bar: Search, Logo, Cart/Profile */}
       <div className="lg:flex hidden border-b-[0.5px] border-[#0000004f] h-1/2 w-full mx-auto justify-between items-center">
         <div className="lg:flex sm:gap-[1rem] ">
@@ -28,7 +28,7 @@ const Header = () => {
             <MdOutlineShoppingCart />
           </Link>
           <Link href="/">
-          <CgProfile />
+            <CgProfile />
           </Link>
         </div>
       </div>
@@ -37,33 +37,38 @@ const Header = () => {
       <div className="lg:hidden flex w-full justify-between items-center h-1/2">
         <h1 className="text-[#22202E] text-2xl font-semibold">Avion</h1>
         <IoSearch className="text-xl" />
-        <MdMenu className="text-2xl cursor-pointer" onClick={toggleMenu} />
+        <MdMenu 
+          className="text-2xl cursor-pointer" 
+          onClick={toggleMenu} 
+        />
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden flex flex-col items-center gap-4 mt-4">
-          <Link href="/" className="text-[#726E8D] text-lg">
-          Home
-          </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Ceramics
-          </Link>
-          <Link href="/product" className="text-[#726E8D] text-lg">
-           Popular
-          </Link>
-          <Link href="/about" className="text-[#726E8D] text-lg">
-            About
-          </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Crockery
-          </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Tableware
-          </Link>
-          <Link href="/" className="text-[#726E8D] text-lg">
-            Cutlery
-          </Link>
+        <div className="absolute top-full left-0 w-full bg-white shadow-md rounded-lg p-4 mt-2 z-10">
+          {[
+            { href: "/", label: "Home" },
+            { href: "/ceramics", label: "Ceramics" },
+            { href: "/product", label: "Popular" },
+            { href: "/about", label: "About" },
+            { href: "/crockery", label: "Crockery" },
+            { href: "/tableware", label: "Tableware" },
+            { href: "/cutlery", label: "Cutlery" },
+          ].map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="block text-[#22202E] text-lg font-medium py-2 px-4 hover:bg-[#f3f4f6] hover:shadow-sm rounded-lg transition-all duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <button 
+            onClick={toggleMenu} 
+            className="w-full mt-4 text-center text-[#726E8D] text-sm font-medium py-2 hover:text-[#5a526c] transition-colors"
+          >
+            Close Menu
+          </button>
         </div>
       )}
 
@@ -73,7 +78,7 @@ const Header = () => {
           <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Home
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+          <Link href="/ceramics" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Ceramics
           </Link>
           <Link href="/product" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
@@ -82,13 +87,13 @@ const Header = () => {
           <Link href="/about" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             About
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+          <Link href="/crockery" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Crockery
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+          <Link href="/tableware" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Tableware
           </Link>
-          <Link href="/" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
+          <Link href="/cutlery" className="hover:text-[#5a526c] border-b-2 border-transparent hover:border-[#5a526c] pb-1">
             Cutlery
           </Link>
         </nav>
