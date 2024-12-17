@@ -1,10 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Herosection = () => {
   return (
     <div className="w-full h-[704px] bg-[#ffffff]">
       <div className="w-full lg:w-[1280px] h-[584px] mt-10 mx-auto bg-[#2A254b] flex flex-col lg:flex-row items-center px-8 relative">
-        
         {/* Left Side: Text and Button */}
         <div className="w-full lg:w-[602px] mt-6 lg:mt-28 mb-9 lg:mb-40">
           <div className="flex-1 z-10 pl-8 lg:pl-10 mb-12 lg:mb-40">
@@ -14,9 +14,11 @@ const Herosection = () => {
             </h2>
 
             {/* Button */}
+            <Link href="/productlist">
             <button className="w-[150px] h-[48px] lg:w-[170px] lg:h-[56px] bg-gray-500 flex items-center justify-center text-xs lg:text-sm font-medium text-[#fafafa] mb-6 mt-6 lg:mt-10">
               View Collection
             </button>
+            </Link>
           </div>
           <div className="w-full lg:w-[602px] font-[satoshi] font-normal text-xs lg:text-sm leading-6 lg:leading-7 text-[#ffffff] mt-6 lg:mt-40 pl-8 lg:pl-10">
             A new era in eco-friendly furniture with Avelon, the French luxury
